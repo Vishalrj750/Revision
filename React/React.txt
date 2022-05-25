@@ -1,0 +1,47 @@
+1 => What is webpack ?
+Ans => Webpack is a popular module bundling system built on top of Node. js. It can handle not only combination and minification of JavaScript and CSS files, but also other assets such as image files through the use of plugins.
+
+2 => What is setState ?
+Ans => setState is a hook of react functional components which is used for manage the state.
+
+3 => What is virtualDOM ?
+Ans => virtualDOM is a concept of react according to which if any state changes in any of the react components then re-rendering happens just for that state not for the entire content in the content.
+
+4 => What is React Portal ?
+Ans => React portals provide a first-class way to render and allow child components, which are typically present outside the DOM, to live within a Document Object Model (DOM) node.
+
+5 => What is context API ?
+Ans => Context API is a way in react app by which we can make a props, state or method global, So that we would be able to use these throughout the app.
+
+6 => What are Life Cycle Methods in React ?
+Ans => In class components "componentDidMount()", "componentDidUpdate()" and "componentDidUnmount()" are the Life cycle methods while in functional components "useEffect()" hook provides Life cycle methods.
+
+7 => How can you memoize components in React ?
+Ans => Since components are just functions though, they can be memoized using React. memo() . This prevents the component from re-rendering unless the dependencies (props) have changed.
+
+8 => How do you do testing on React ?
+Ans => Jest is a JavaScript test runner that lets you access the DOM via jsdom. While jsdom is only an approximation of how the browser works, it is often good enough for testing React components. Jest provides a great iteration speed combined with powerful features like mocking modules and timers so you can have more control over how the code executes.
+
+9 => What is the difference between the State and Props ?
+Ans => Props are used to pass data from one component to another. The state is a local data storage that is local to the component only and cannot be passed to other components.
+
+10 => What is the dependency Array in Hooks ? How many values can you pass into it ?
+Ans => Dependency arrays are a concept that is tightly coupled to hooks in React (thus also to function components). Some hooks, like useEffect and useCallback have 2 arguments. The first one is a callback (a function), and the second one is the dependency array. It takes the form of an array of variables. We can pass multiple values into it.
+
+11 => What happens when you return something inside a useEffect ? When does it get called ?
+Ans => It is as similar as componentDidUnmount() and it gets called when component get unmount.
+
+12 => What are memory leakages ?
+Ans => Memory leaks in React applications are primarily a result of not cancelling subscriptions made when a component was mounted before the component gets unmounted.
+
+13 => What are custom hooks ?
+Ans => React provides us a feature to customize our own hook as per our requirement. It is called custom hooks.
+
+14 => What are the rules of hooks ?
+Ans => Don’t call Hooks inside loops, conditions, or nested functions. Instead, always use Hooks at the top level of your React function, before any early returns. By following this rule, you ensure that Hooks are called in the same order each time a component renders. That’s what allows React to correctly preserve the state of Hooks between multiple useState and useEffect calls.
+
+15 => What is useReducer ?
+Ans => useReducer is a hook of React which is used to manage the states. The only difference between useState and useReducer is that useReducer is more convenient to use when we need to deal with various actions.
+
+16 => What is the difference between the Context and Redux ?
+Ans => Context API is a way to manage the state globally which is provided by React itself although Redux is a seperate library which can also be used for manage the state globally.
