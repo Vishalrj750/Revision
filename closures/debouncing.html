@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <input type="text" id="input" placeholder="Type Something" onkeyup="debouncer()(event.target.value)" >
+    </div>
+    <script>
+        function displayData(e){
+            let main = document.getElementById("main");
+            let p = document.createElement("p");
+            p.innerHTML = e;
+            main.append(p);
+        }
+        let timer;
+        function debouncer() {
+            
+            return function(e){
+                    if(timer){
+                        clearTimeout(timer);
+                    }
+                    timer = setTimeout(() => {
+                        displayData(e);
+                    }, 500)
+                };               
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            * {
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <input type="text" name="search" placeholder="Search Something" onkeyup="doSomeMagic(event.target.value)">
+        <script>
+            function getData(e) {
+                console.log(e);
+            }
+
+            let flag = true;
+            let timer;
+            function doSomeMagic(e) {
+                if (flag) {
+                    getData(e);
+                    flag = false;
+                }
+                if (! timer) {
+                    timer = setTimeout(() => {
+                        flag = true;
+                        timer = 0;
+                    }, 300)
+                }
+            }
+
+            console.log(flag, timer);
+        </script>
+    </body>
+</html>
